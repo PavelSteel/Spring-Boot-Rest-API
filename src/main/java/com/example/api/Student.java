@@ -1,0 +1,29 @@
+package com.example.api;
+
+import java.time.LocalDate;
+
+public class Student {
+    private long id;
+    private String name;
+    private LocalDate dob;
+
+    public Student() {
+    }
+
+    public Student(String name, LocalDate dob) {
+        this.name = name;
+        this.dob = dob;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public LocalDate getDob() {
+        return dob;
+    }
+}
