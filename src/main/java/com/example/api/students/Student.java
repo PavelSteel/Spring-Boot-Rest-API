@@ -26,4 +26,13 @@ public class Student {
     public LocalDate getDob() {
         return dob;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", dob=" + dob +
+                '}';
+    }
 }

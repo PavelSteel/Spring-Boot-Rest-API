@@ -13,4 +13,8 @@ public class StudentService {
                 new Student("Pavel", LocalDate.of(1989, Month.APRIL, 19)),
                 new Student("Alex", LocalDate.of(1989, Month.MARCH, 9)));
     }
+
+    public void add(Student student) {
+        System.out.println(student);
+    }
 }

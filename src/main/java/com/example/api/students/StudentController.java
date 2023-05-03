@@ -1,11 +1,11 @@
 package com.example.api.students;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@RequestMapping("v1/students")
 public class StudentController {
 
     private final StudentService studentService;
@@ -14,8 +14,13 @@ public class StudentController {
         this.studentService = studentService;
     }
 
-    @GetMapping(path = "students")
-    public List<Student> list(){
+    @GetMapping(path = "list")
+    public List<Student> list() {
         return studentService.list();
+    }
+
+    @PostMapping(path = "item")
+    public void add(@RequestBody Student student) {
+        studentService.add(student);
     }
 }
