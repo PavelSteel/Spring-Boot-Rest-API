@@ -1,6 +1,5 @@
 package com.example.api.students;
 
-import jakarta.websocket.server.PathParam;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,4 +28,9 @@ public class StudentController {
     public void delete(@PathVariable Long studentId) {
         studentService.delete(studentId);
     }
+    @PutMapping(path = "item")
+    public void delete(@RequestBody Student student) {
+        studentService.update(student);
+    }
+
 }
